@@ -1,0 +1,26 @@
+.card-box {
+    background-color: #FFFFFF;
+    border: 1px solid  #FFFFFF;
+    font-family: "Roboto";
+    color: #707070;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 300px;
+    height: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.card-box body {
+    background-color: #FFFFFF;
+    margin-top: 80px;
+}
+
+.box__logos {
+    margin-top: 80px;
+    margin-left: 225px;
+    margin-bottom: 20px
+}

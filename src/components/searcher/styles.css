@@ -1,0 +1,61 @@
+.searcher-box {
+    background-color: #FFFFFF;
+    border: 1px solid  #FFFFFF;
+    font-family: "Roboto";
+    color: #8245BF;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    width: 300px;
+    height: 105px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.searcher-box input {
+    width: 75%;
+    height: 20%;
+    border: 2px solid gray;
+    border-radius: 4px;
+  }
+
+.searcher-box button {
+    font-family: "Roboto";
+    color: #FFFFFF;
+    border-radius: 5px;
+    background-color: #8245BF;
+    width: 60px;
+    height: 30px;
+    align-items: center;
+}
+
+.box__formHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.box__formTitle{
+    display: flex;
+    align-items: center;
+}
+
+.box__formTitle strong{
+    margin-left: 10px;
+}
+
+.box__inputButton {
+    direction: flex;
+    align-items: center;
+    margin-top: 20px;
+
+} 
+
+.box__formHeader span {
+    display: flex;
+    margin-right: 20px; 
+}
