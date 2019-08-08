@@ -5,7 +5,7 @@
     color: #8245BF;
     border-radius: 5px;
     padding: 20px;
-    margin-top: 80px;
+    margin-top: 70px;
     margin-bottom: 20px;
     width: 300px;
     height: 105px;
@@ -36,7 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 0px;
 }
 
 .box__formTitle{
@@ -58,4 +58,11 @@
 .box__formHeader span {
     display: flex;
     margin-right: 20px; 
+}
+
+.mensagem-erro {
+    color: #FFFFFF;
+    background-color: #F2CB05;
+    font-size: 84%;
+    margin-top: 0px;
 }
