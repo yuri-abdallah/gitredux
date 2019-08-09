@@ -63,6 +63,8 @@
 .mensagem-erro {
     color: #FFFFFF;
     background-color: #F2CB05;
-    font-size: 84%;
+    font-size: 78%;
     margin-top: 0px;
+    padding: 10px 10px;
+    border-radius: 5px;
 }

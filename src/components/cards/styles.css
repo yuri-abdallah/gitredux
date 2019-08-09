@@ -46,15 +46,18 @@
 
 table {
     width: 100%;
+    border-collapse: collapse;
 }
 
 table tr td:first-child {
     font-weight: bold;
+    padding-left: 10px;
    
 }
 
 table tr td:last-child {
     text-align: end;
+    padding-right: 10px;
 }
 
 table tr td {
@@ -64,4 +67,4 @@ table tr td {
 
 table tr:nth-child(odd) {
 	background: #fcfafa;
-	} 
+} 

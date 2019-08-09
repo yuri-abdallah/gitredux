@@ -6,6 +6,11 @@ import './styles.css';
 // import { Container } from './styles';
 
 class cards extends Component {
+
+  state = {
+    clicked: false,
+  }
+
   render() {
     return (
       <div className="card-box">
@@ -45,7 +50,7 @@ class cards extends Component {
           </table>
           <div className="box__logos">
             <img src={reload} style={{ height: 25 }} alt="reload-logo"></img>
-            <img src={remove} style={{ height: 32 }} alt="remove-logo"></img>
+            <img src={remove} style={{ height: 32 }} alt="remove-logo" onClick={() => this.handleClick(this.props.repositorio.id, this.props.repositorio)} ></img>
           </div>
         </div>
       </div >
