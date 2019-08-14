@@ -6,9 +6,15 @@ import './styles.css';
 // import { Container } from './styles';
 
 class cards extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      clicked: false,
+    }
+  }
 
-  state = {
-    clicked: false,
+  sendeDelete(id) {
+    this.props.handleClick(id)
   }
 
   render() {
@@ -49,8 +55,8 @@ class cards extends Component {
             </tbody>
           </table>
           <div className="box__logos">
-            <img src={reload} style={{ height: 25 }} alt="reload-logo"></img>
-            <img src={remove} style={{ height: 32 }} alt="remove-logo" onClick={() => this.handleClick(this.props.repositorio.id, this.props.repositorio)} ></img>
+            <img src={reload} style={{ height: 25 }} alt="reload-logo" onClick={() => this.props.atualiza(this.props.repositorio.id)}></img>
+            <img src={remove} style={{ height: 32 }} alt="remove-logo" onClick={() => this.props.handleClicked(this.props.repositorio.id)} ></img>
           </div>
         </div>
       </div >

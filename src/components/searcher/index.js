@@ -10,12 +10,12 @@ export default class searcher extends Component {
     nomeRepositorio: ''
   }
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      inputfield: "no value"
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     inputfield: "no value"
+  //   };
+  // }
 
   handleSubmit = (event) => {
     event.preventDefault();

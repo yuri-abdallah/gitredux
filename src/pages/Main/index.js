@@ -3,7 +3,7 @@ import Searcher from '../../components/searcher';
 import Cards from '../../components/cards';
 import api from '../../services/api';
 import './styles.css';
-import { Z_FILTERED } from 'zlib';
+//import { Z_FILTERED } from 'zlib';
 
 class Main extends Component {
 
@@ -30,7 +30,7 @@ class Main extends Component {
             if (newArray === undefined) {
                 this.setState({ dados: [...this.state.dados, response.data] });
             } else {
-                alert("ja");
+                alert("Repositorio já adicionado");
             }
 
             // console.log(this.repo.id);
@@ -43,15 +43,36 @@ class Main extends Component {
         }
     }
 
-    handleClick(id, repositorio) {
-        this.setState({ clicked: true });
-        console.log(this.state.clicked);
+    joseAlfredoDaConceicao = (id) => {
+        // this.setState({ clicked: true });
+        // console.log(this.state.clicked);
 
+        console.log(id);
         const newArray = this.state.dados.filter(repo => (
             id !== repo.id
         ));
-        console.log(newArray);
+        this.setState({ dados: newArray });
 
+    }
+
+    refreshCard = async (id) => {
+        const newArray = this.state.dados.find(repo => (
+            id === repo.id
+        ));
+
+        const response = await api.get(`https://api.github.com/repos/${newArray.full_name}`);
+
+        var newArray1 = [];
+        for (var i = 0; i < this.state.dados.length; i++) {
+            if (this.state.dados[i].id === id) {
+                newArray1[i] = response.data;
+            } else {
+                newArray1[i] = this.state.dados[i];
+            }
+        }
+        console.log(newArray1);
+        this.setState({ dados: newArray1 });
+        console.log(this.state.dados)
     }
 
 
@@ -61,7 +82,7 @@ class Main extends Component {
                 <Searcher handleClick={this.handleSearchRepos} contagem={this.state.dados.length} validacao={this.state.erro} />
                 <div className="grig-cards">
                     {this.state.dados.map(repo => (
-                        <Cards key={repo.id} repositorio={repo} handleClick={this} />
+                        <Cards key={repo.id} repositorio={repo} handleClicked={this.joseAlfredoDaConceicao} atualiza={this.refreshCard} />
                     ))}
                 </div>
             </Fragment >
